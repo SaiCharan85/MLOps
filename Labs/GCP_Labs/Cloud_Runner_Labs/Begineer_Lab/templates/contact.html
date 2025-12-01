@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Flask App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-6 mx-auto">
+        <h2>Contact Us</h2>
+        <p class="lead">Have questions? Send us a message and we'll get back to you soon!</p>
+        
+        <form method="POST" action="{{ url_for('contact') }}" class="mt-4">
+            {{ form.hidden_tag() }}
+            
+            <div class="mb-3">
+                {{ form.name.label(class="form-label") }}
+                {{ form.name(class="form-control" + (" is-invalid" if form.name.errors else "")) }}
+                {% if form.name.errors %}
+                    <div class="invalid-feedback">
+                        {{ form.name.errors[0] }}
+                    </div>
+                {% endif %}
+            </div>
+            
+            <div class="mb-3">
+                {{ form.email.label(class="form-label") }}
+                {{ form.email(class="form-control" + (" is-invalid" if form.email.errors else "")) }}
+                {% if form.email.errors %}
+                    <div class="invalid-feedback">
+                        {{ form.email.errors[0] }}
+                    </div>
+                {% endif %}
+            </div>
+            
+            <div class="mb-3">
+                {{ form.subject.label(class="form-label") }}
+                {{ form.subject(class="form-control" + (" is-invalid" if form.subject.errors else "")) }}
+                {% if form.subject.errors %}
+                    <div class="invalid-feedback">
+                        {{ form.subject.errors[0] }}
+                    </div>
+                {% endif %}
+            </div>
+            
+            <div class="mb-3">
+                {{ form.message.label(class="form-label") }}
+                {{ form.message(rows=5, class="form-control" + (" is-invalid" if form.message.errors else "")) }}
+                {% if form.message.errors %}
+                    <div class="invalid-feedback">
+                        {{ form.message.errors[0] }}
+                    </div>
+                {% endif %}
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Flask App{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to Flask App</h1>
+    <p class="lead">A modern web application built with Flask and Bootstrap 5</p>
+    <hr class="my-4">
+    <p>Get started by exploring the features below or check out the about page to learn more.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('about') }}" role="button">Learn more</a>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Feature One</h5>
+                <p class="card-text">Modern and responsive design that works on all devices.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Feature Two</h5>
+                <p class="card-text">Built with Bootstrap 5 for beautiful UI components.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Feature Three</h5>
+                <p class="card-text">Easy to extend and customize for your needs.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

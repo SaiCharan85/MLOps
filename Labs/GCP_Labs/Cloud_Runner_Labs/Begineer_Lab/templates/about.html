@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}About - Flask App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <h2>About This Application</h2>
+        <p class="lead">This is a modern web application built with Flask, a lightweight WSGI web application framework in Python.</p>
+        
+        <div class="card my-4">
+            <div class="card-header">
+                <h5>Key Features</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Responsive design with Bootstrap 5</li>
+                    <li class="list-group-item">Template inheritance for consistent layout</li>
+                    <li class="list-group-item">Flash messages for user feedback</li>
+                    <li class="list-group-item">Contact form with server-side validation</li>
+                    <li class="list-group-item">Clean URL routing</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card my-4">
+            <div class="card-header">
+                <h5>Technologies Used</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Python 3.x</li>
+                            <li>Flask 2.x</li>
+                            <li>Bootstrap 5</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Jinja2 Templating</li>
+                            <li>jQuery</li>
+                            <li>Font Awesome</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
